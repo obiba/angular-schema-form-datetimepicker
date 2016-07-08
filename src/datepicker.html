@@ -5,10 +5,10 @@
     ng-model="$$value$$"
     schema-validate="form"
     data-date-type="{{form.dateOptions.dateType || 'string'}}"
-    data-date-format="{{form.dateOptions.dateFormat || 'dd/MM/yyyy'}}"
+    data-date-format="{{form.dateOptions.dateFormat || 'yyyy-MM-dd'}}"
     data-autoclose="{{form.dateOptions.autoclose}}"
-    data-min-date="{{form.dateOptions.minDate}}"
-    data-max-date="{{form.dateOptions.maxDate}}"
+    data-min-date="{{form.dateOptions.minDateIsRef && (form.dateOptions.dateFormat === 'yyyy-MM-dd' || !form.dateOptions.dateFormat) ? model[form.dateOptions.minDate] : form.dateOptions.minDate}}"
+    data-max-date="{{form.dateOptions.maxDateIsRef && (form.dateOptions.dateFormat === 'yyyy-MM-dd' || !form.dateOptions.dateFormat) ? model[form.dateOptions.maxDate] : form.dateOptions.maxDate}}"
     data-use-navitve="{{form.dateOptions.useNative || false}}"
     bs-datepicker />
   <span ng-if="form.feedback !== false"
