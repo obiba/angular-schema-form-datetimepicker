@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "angular-strap": ">= 2.1.0",
-    "angular-moment": "0.10.3"
+    "angular-moment": "1.0.0"
   },
   "devDependencies": {
     "angular-schema-form": ">= 0.7",
